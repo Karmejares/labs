@@ -1,0 +1,11 @@
+SELECT 
+    s.name, 
+    s.id AS suspect_id, 
+    i.transcript
+FROM suspects s
+JOIN crime_scene c
+JOIN interviews i ON s.id = i.suspect_id
+WHERE c.location LIKE '%Blue Note Lounge%'
+  AND s.scar LIKE '%left cheek%'
+  AND s.attire LIKE '%trench coat%'
+  AND i.transcript IS NOT NULL;
