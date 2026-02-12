@@ -1,0 +1,8 @@
+SELECT cs.description AS crime_clue,
+       s.name AS suspect_name,
+       s.attire,
+       i.transcript
+FROM crime_scene cs
+JOIN suspects s ON s.attire LIKE '%trench coat%'
+JOIN interviews i ON s.id = i.suspect_id
+WHERE cs.location = 'Blue Note Lounge';
