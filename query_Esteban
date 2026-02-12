@@ -1,0 +1,5 @@
+SELECT * FROM crime_scene where location = 'Blue Note Lounge';
+
+SELECT * from suspects where attire = 'trench coat' and scar = 'left cheek' --id 3 y 183;
+
+select * from interviews where suspect_id = "3" or suspect_id = "183":
