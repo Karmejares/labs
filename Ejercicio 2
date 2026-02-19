@@ -1,0 +1,11 @@
+SELECT
+    s.name,
+    s.bandana_color,
+    s.accessory,
+    i.transcript
+FROM suspects s
+JOIN interviews i
+    ON s.id = i.suspect_id
+WHERE s.bandana_color = 'red'
+AND s.accessory = 'gold watch'
+AND i.transcript IS NOT NULL;
